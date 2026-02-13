@@ -26,7 +26,7 @@ Este projeto simula um sistema de detecção de anomalias em tempo real para tra
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                      CAMADA DE INGESTÃO                          │
+│                      CAMADA DE INGESTÃO                         │
 ├─────────────────────────────────────────────────────────────────┤
 │  Gerador de Transações → Simulação de stream de dados           │
 │  (Python + Faker)        (5-10 transações/segundo)              │
@@ -34,7 +34,7 @@ Este projeto simula um sistema de detecção de anomalias em tempo real para tra
                              │
                              ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│                   CAMADA DE PROCESSAMENTO                        │
+│                   CAMADA DE PROCESSAMENTO                       │
 ├─────────────────────────────────────────────────────────────────┤
 │  Validação & Limpeza  →  Feature Engineering  →  Detecção       │
 │  - Dados inválidos        - Agregações            - Isolation   │
@@ -44,9 +44,9 @@ Este projeto simula um sistema de detecção de anomalias em tempo real para tra
                              │
                              ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│                   CAMADA DE ARMAZENAMENTO                        │
+│                   CAMADA DE ARMAZENAMENTO                       │
 ├─────────────────────────────────────────────────────────────────┤
-│  PostgreSQL                                                      │
+│  PostgreSQL                                                     │
 │  ├── raw_transactions (dados brutos)                            │
 │  ├── processed_transactions (dados processados)                 │
 │  ├── anomalies (anomalias detectadas)                           │
@@ -55,9 +55,9 @@ Este projeto simula um sistema de detecção de anomalias em tempo real para tra
                              │
                              ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│                    CAMADA DE VISUALIZAÇÃO                        │
+│                    CAMADA DE VISUALIZAÇÃO                       │
 ├─────────────────────────────────────────────────────────────────┤
-│  Dashboard Streamlit                                             │
+│  Dashboard Streamlit                                            │
 │  ├── Métricas em tempo real                                     │
 │  ├── Gráficos de tendências                                     │
 │  ├── Lista de anomalias                                         │
