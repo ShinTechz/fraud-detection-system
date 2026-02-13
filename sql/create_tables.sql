@@ -176,3 +176,23 @@ CREATE INDEX IF NOT EXISTS idx_anomalies_notes_ts ON anomalies USING gin(to_tsve
 
 -- Comentários
 COMMENT ON TABLE raw_transactions IS 'Dados originais de transações financeiras';
+
+-- =====================================================
+-- 6. TABELA DE DADOS DE MERCADO (BRAPI)
+-- =====================================================
+CREATE TABLE IF NOT EXISTS market_data (
+    market_id SERIAL PRIMARY KEY,
+    symbol VARCHAR(20) NOT NULL,
+    short_name VARCHAR(100),
+    price DECIMAL(15, 2) NOT NULL,
+    change_percent DECIMAL(10, 4),
+    market_cap DECIMAL(25, 2),
+    volume_24h DECIMAL(25, 2),
+    timestamp TIMESTAMP NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_market_symbol_time ON market_data (symbol, timestamp DESC);
+CREATE INDEX IF NOT EXISTS idx_market_price ON market_data (price);
+
+COMMENT ON TABLE market_data IS 'Preços e métricas de ativos (Ações e Criptos) via Brapi API';
