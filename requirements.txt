@@ -15,12 +15,12 @@ psycopg2-binary>=2.9.10
 sqlalchemy>=2.0.30
 
 # Data Quality
-great-expectations>=0.18.15
+#great-expectations
 
 # Visualization & Dashboard
 streamlit>=1.35.0
 plotly>=5.20.0
-altair>=5.4.0
+altair<5.0.0
 
 # API
 fastapi>=0.115.0
@@ -46,9 +46,9 @@ click>=8.1.7
 rich>=13.7.0
 
 # Jupyter
-jupyter>=1.1.1
-ipykernel>=6.29.0
-notebook>=7.2.0
+#jupyter>=1.1.1
+#ipykernel>=6.29.0
+#notebook>=7.2.0
 
 # Timezone handling
 pytz>=2024.1
