@@ -205,3 +205,77 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Adicionar ao final do .gitignore
+cat >> .gitignore << 'EOF'
+
+# ============================================
+# FRAUD DETECTION SYSTEM - Specific files
+# ============================================
+
+# Logs directory
+logs/
+*.log
+
+# Data files (não versionar datasets grandes)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Kaggle credentials
+.kaggle/
+kaggle.json
+
+# Database dumps
+*.sql.gz
+*.dump
+
+# Streamlit cache
+.streamlit/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# IDEs (descomente se quiser ignorar)
+# .vscode/
+# .idea/
+
+EOF
+
+# ============================================
+# FRAUD DETECTION SYSTEM - Specific files
+# ============================================
+
+# Logs directory
+logs/
+*.log
+
+# Data files (não versionar datasets grandes)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Kaggle credentials
+.kaggle/
+kaggle.json
+
+# Database dumps
+*.sql.gz
+*.dump
+
+# Streamlit cache
+.streamlit/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
